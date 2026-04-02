@@ -25,11 +25,31 @@ This is a Playwright + TypeScript automation test framework specifically designe
 - ✅ Filter (All/Active/Completed)
 - ✅ Edit todo items
 
-### SVGOMG Tests (DEV Environment)
-- ✅ Page load validation
-- ✅ SVG paste functionality
-- ✅ Optimization options configuration
-- ✅ Image compression validation
+##  API Test Coverage (Restful-Booker)
+
+API endpoint: `https://restful-booker.herokuapp.com`
+
+### Full Booking Lifecycle Test (Chain Call)
+
+| Step | Operation | Endpoint | Description |
+|------|-----------|----------|-------------|
+| 1 | Get Auth Token | `POST /auth` | Generate token for update/delete operations |
+| 2 | Create Booking | `POST /booking` | Create a new booking record |
+| 3 | Get Booking | `GET /booking/{id}` | Verify booking was created correctly |
+| 4 | Full Update | `PUT /booking/{id}` | Fully update the booking with token |
+| 5 | Partial Update | `PATCH /booking/{id}` | Partially update the booking with token |
+| 6 | Delete Booking | `DELETE /booking/{id}` | Delete the booking with token |
+| 7 | Verify Deletion | `GET /booking/{id}` | Confirm booking returns 404 after deletion |
+| 8 | Validate Schema | `POST /booking` | Verify response schema structure |
+
+### Validation Points
+
+- ✅ Status code validation (2xx, 4xx)
+- ✅ Response data integrity
+- ✅ JSON Schema validation
+- ✅ Chain dependency (token, booking ID)
+- ✅ Post-deletion resource verification
+
 
 ##  Prerequisites
 
