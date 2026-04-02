@@ -7,8 +7,7 @@ This is a Playwright + TypeScript automation test framework specifically designe
 | Environment | Test Website | Description |
 |-------------|--------------|-------------|
 | **QA** | [TodoMVC](https://demo.playwright.dev/todomvc) | Todo application testing |
-| **DEV** | [SVGOMG](https://demo.playwright.dev/svgomg) | SVG image optimization tool testing |
-
+| **DEV** | 
 ##  Tech Stack
 
 - [Playwright](https://playwright.dev/) - End-to-end testing framework
@@ -27,7 +26,7 @@ This is a Playwright + TypeScript automation test framework specifically designe
 
 ##  API Test Coverage (Restful-Booker)
 
-API endpoint: `https://restful-booker.herokuapp.com`
+The test cases location: tests\api
 
 ### Full Booking Lifecycle Test (Chain Call)
 
