@@ -24,9 +24,23 @@ This is a Playwright + TypeScript automation test framework specifically designe
 - ✅ Filter (All/Active/Completed)
 - ✅ Edit todo items
 
+### dynamic elements scene
+Locatioln: tests/functional/dynamic-element-scene.spec.ts
+
+| Category | Test Scenarios |
+|----------|----------------|
+| **Dynamic Elements** | Hidden elements, async loading, dynamic add/remove |
+| **Popups** | Alert, Confirm (accept/cancel), Prompt (input/cancel) |
+| **Mouse & Keyboard** | Key presses, right-click, hover effects |
+| **Windows & iframe** | New window switching, nested iframe location |
+| **File Operations** | File upload, file download |
+| **Tables** | Data sorting, dynamic editing |
+| **Authentication** | HTTP Basic auth, Cookie operations |
+| **Performance** | Slow loading, infinite scroll, redirects, image detection |
+
 ##  API Test Coverage (Restful-Booker)
 
-The test cases location: tests\api
+The test cases location: tests/api
 
 ### Full Booking Lifecycle Test (Chain Call)
 
