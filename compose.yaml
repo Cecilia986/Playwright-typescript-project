@@ -1,6 +1,6 @@
 services:
-  playwrighttypescriptplaywrighttest:
-    image: playwrighttypescriptplaywrighttest
+  playwrighttypescripttest:
+    image: playwrighttypescripttest
     build:
       context: .
       dockerfile: ./Dockerfile

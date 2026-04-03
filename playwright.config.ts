@@ -2,7 +2,7 @@ import { PlaywrightTestConfig, devices } from '@playwright/test';
 import { testConfig } from './testConfig';
 import { OrtoniReportConfig } from 'ortoni-report';
 
-const ENV = process.env.ENV || process.env.npm_config_ENV; // Support both modern and legacy patterns
+const ENV = (process.env.ENV || process.env.npm_config_ENV) as 'qa' | 'dev' | 'qaApi' | 'devApi' ; // Support both modern and legacy patterns
 const isCI = !!process.env.CI; // Detect if running in CI environment
 
 if (!ENV || ![`qa`, `dev`, `qaApi`, `devApi`].includes(ENV)) {
