@@ -1,5 +1,9 @@
 name: CI/CD Pipeline for Playwright Tests
 
+permissions:
+  contents: write
+  pages: write
+
 on:
   push:
     branches:
@@ -60,7 +64,7 @@ jobs:
               if: failure()
               uses: actions/upload-artifact@v4
               with:
-                name: trace-files-${{ matrix.browse }}
+                name: trace-files-${{ matrix.browser }}
                 path: test-result/**/*.zip
                 retention-days: 30
     
@@ -91,12 +95,8 @@ jobs:
               run: npm ci
             
             - name: Generate Allure report
-              run: npm ci
-            
-            - name: Generate Allure report
-              run: |
-               npm runallureReport || true
-               echo " Allure report generated"
+              run: npm run allureReport || true
+                  echo " Allure report generated"
             
             - name: Upload allure report as artifact
               uses: actions/upload-artifact@v4
@@ -107,7 +107,7 @@ jobs:
          
             - name: Deploy report to GitHub pages
               if: github.ref == 'refs/heads/main'
-              uses: peaceiris/actions-gh-pages@v3
+              uses: peaceiris/actions-gh-pages@v4
               with:
                 github_token: ${{ secrets.GITHUB_TOKEN}}
                 publish_dir: ./playwright-report

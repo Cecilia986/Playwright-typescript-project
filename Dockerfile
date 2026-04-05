@@ -1,10 +1,23 @@
-FROM node:lts-alpine
-ENV NODE_ENV=production
-WORKDIR /usr/src/app
-COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
-RUN npm install --production --silent && mv node_modules ../
+# Dockerfile
+# Use official Playwright image (includes all browsers)
+FROM mcr.microsoft.com/playwright:v1.40.0-focal
+
+# Set working directory
+WORKDIR /app
+
+# Copy package.json and package-lock.json
+COPY package*.json ./
+
+# Install dependencies
+RUN npm ci
+
+# Copy all source code
 COPY . .
-EXPOSE 3000
-RUN chown -R node /usr/src/app
-USER node
-CMD ["node", "index.js"]
+
+# Create test results directories
+RUN mkdir -p test-results playwright-report allure-results html-report
+
+# Set environment variables
+ENV CI=true
+# Run tests on Chrome (QA environment by default)
+CMD ["npx", "playwright", "test", "--project=Chrome"]

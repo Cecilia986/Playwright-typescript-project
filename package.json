@@ -17,7 +17,7 @@
     "test:record": "npx playwright codegen",
     "test:visual": "cross-env ENV=ci npx playwright test visualComparision.test.ts --project=Chrome",
     "test:device": "cross-env ENV=ci npx playwright test Emulation.test.ts --project=Device",
-    "allureReport": "allure serve",
+    "allureReport": "allure generate allure-results --clean",
     "lighthouse": "node tests/lighthouse/Lighthouse.js",
     "test:accessibility": "cross-env ENV=ci npx playwright test Axe.test.ts --project=Chrome"
   },
