@@ -168,7 +168,7 @@ jobs:
            payload: |
             {
              "text": "${{ steps.status.outputs.status }} - Playwright Tests",
-             "blocks": [...]
+             
              }
           env:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}        
