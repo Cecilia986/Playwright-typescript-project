@@ -71,7 +71,7 @@ The framework applies modern automation design principles:
 
 ---
 
-# 🧪 Test Coverage
+#  Test Coverage
 
 This framework includes testing for both **UI workflows** and **REST APIs**.
 
