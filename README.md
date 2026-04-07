@@ -18,7 +18,9 @@ Key objectives of this project:
 
 The framework follows a modular layered design:
 tests/ 
+
 ├── functional/ # UI test scenarios 
+
 ├── api/ # API test scenarios 
 
 pages/ # Page Object Model classes
