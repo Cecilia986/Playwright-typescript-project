@@ -17,6 +17,7 @@ Key objectives of this project:
 #  Framework Architecture
 
 The framework follows a modular layered design:
+
 tests/ 
 
 ├── functional/ # UI test scenarios 
