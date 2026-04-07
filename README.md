@@ -1,85 +1,355 @@
-# Playwright TodoMVC & SVGOMG Test Framework
+#  Playwright TypeScript Automation Framework
 
-This is a Playwright + TypeScript automation test framework specifically designed for testing Playwright's official demo websites.
+A scalable end-to-end (E2E) automation testing framework built using **Playwright** and **TypeScript**, designed to simulate real-world enterprise testing scenarios. The framework supports containerized execution using Docker and automated CI/CD pipelines using GitHub Actions.
 
-## Test Targets
+This project demonstrates modern test automation practices including **UI testing**, **API testing**, **modular framework design**, and **CI/CD integration**.
 
-| Environment | Test Website | Description |
-|-------------|--------------|-------------|
-| **QA** | [TodoMVC](https://demo.playwright.dev/todomvc) | Todo application testing |
-| **DEV** | 
-##  Tech Stack
+---
 
-- [Playwright](https://playwright.dev/) - End-to-end testing framework
-- [TypeScript](https://www.typescriptlang.org/) - Type safety
-- [Allure Report](https://allurereport.org/) - Test reporting
-- [Ortoni Report](https://github.com/ortoniKC/ortoni-report) - HTML reporting
+#  Project Overview
 
-##  Test Coverage
+This project implements a **production-style automation framework** that supports testing of dynamic web applications and REST APIs.
 
-### TodoMVC Tests (QA Environment)
-- ✅ Add todo items
-- ✅ Mark complete/incomplete
-- ✅ Delete todo items
-- ✅ Filter (All/Active/Completed)
-- ✅ Edit todo items
+The framework is designed using **Page Object Model (POM)** and modular architecture to ensure maintainability, scalability, and reusability.
 
-### dynamic elements scene
-Locatioln: tests/functional/dynamic-element-scene.spec.ts
+Key objectives of this project:
 
-| Category | Test Scenarios |
-|----------|----------------|
-| **Dynamic Elements** | Hidden elements, async loading, dynamic add/remove |
-| **Popups** | Alert, Confirm (accept/cancel), Prompt (input/cancel) |
-| **Mouse & Keyboard** | Key presses, right-click, hover effects |
-| **Windows & iframe** | New window switching, nested iframe location |
-| **File Operations** | File upload, file download |
-| **Tables** | Data sorting, dynamic editing |
-| **Authentication** | HTTP Basic auth, Cookie operations |
-| **Performance** | Slow loading, infinite scroll, redirects, image detection |
+- Build a scalable and maintainable automation framework
+- Demonstrate UI and API automation capabilities
+- Apply modern automation design patterns
+- Support CI/CD-based test execution
+- Simulate real-world enterprise automation workflows
 
-##  API Test Coverage (Restful-Booker)
+---
 
-The test cases location: tests/api
+#  Framework Architecture
 
-### Full Booking Lifecycle Test (Chain Call)
+The framework follows a modular layered design:
+tests/
+├── functional/ # UI test scenarios
+├── api/ # API test scenarios
 
-| Step | Operation | Endpoint | Description |
-|------|-----------|----------|-------------|
-| 1 | Get Auth Token | `POST /auth` | Generate token for update/delete operations |
-| 2 | Create Booking | `POST /booking` | Create a new booking record |
-| 3 | Get Booking | `GET /booking/{id}` | Verify booking was created correctly |
-| 4 | Full Update | `PUT /booking/{id}` | Fully update the booking with token |
-| 5 | Partial Update | `PATCH /booking/{id}` | Partially update the booking with token |
-| 6 | Delete Booking | `DELETE /booking/{id}` | Delete the booking with token |
-| 7 | Verify Deletion | `GET /booking/{id}` | Confirm booking returns 404 after deletion |
-| 8 | Validate Schema | `POST /booking` | Verify response schema structure |
+pages/ # Page Object Model classes
 
-### Validation Points
+utils/ # Reusable helper functions
 
-- ✅ Status code validation (2xx, 4xx)
-- ✅ Response data integrity
-- ✅ JSON Schema validation
-- ✅ Chain dependency (token, booking ID)
-- ✅ Post-deletion resource verification
+fixtures/ # Shared test setup
+
+config/ # Environment configuration
+
+reports/ # Test output reports
 
 
-##  Prerequisites
+### Architecture Layers
 
-- Node.js 18+
-- npm 8+
+**Tests Layer**
+- Contains UI and API test cases
+- Implements business-level workflows
 
-##  Installation
+**Page Layer**
+- Implements Page Object Model (POM)
+- Encapsulates UI element interactions
 
-```bash
-# Clone the project
+**Utilities Layer**
+- Provides reusable helper functions
+- Includes API helpers and test utilities
+
+**Configuration Layer**
+- Manages test environments
+- Controls browser and execution settings
+
+**Reporting Layer**
+- Generates execution reports
+- Supports HTML and Allure reports
+
+---
+
+# 🧩 Design Patterns Used
+
+The framework applies modern automation design principles:
+
+- **Page Object Model (POM)** – Improves maintainability
+- **Modular Architecture** – Enables scalability
+- **Reusable Utilities** – Reduces duplication
+- **Fixture-based Setup** – Standardizes test initialization
+- **API Test Chaining** – Supports workflow testing
+
+---
+
+# 🧪 Test Coverage
+
+This framework includes testing for both **UI workflows** and **REST APIs**.
+
+---
+
+## 🌐 UI Testing (`tests/functional/`)
+
+### Covered Scenarios:
+
+- Dynamic elements handling
+- Hidden and asynchronous elements
+- Alerts, confirms, prompts
+- Drag and drop interactions
+- Mouse and keyboard actions
+- Right-click and hover actions
+- Iframe handling
+- File upload and download
+- Table sorting and validation
+- Authentication workflows
+- Cookie handling
+- Infinite scrolling
+- Redirect validation
+
+### Sample UI Test Files:
+
+- `dynamic-element-scene.spec.ts`
+- `basic-form-scenarios.spec.ts`
+- `todomvc.spec.ts`
+
+---
+
+## 🔌 API Testing (`tests/api/`)
+
+API tests simulate real-world backend workflows.
+
+### Covered Scenarios:
+
+- Authentication token generation
+- CRUD operations
+- API chaining workflows
+- Response validation
+- Error response verification
+- Schema validation
+- Resource lifecycle testing
+
+### Target APIs:
+
+**Restful-Booker**
+
+Workflow includes:
+
+- Create booking
+- Retrieve booking
+- Update booking
+- Patch booking
+- Delete booking
+- Validate deletion
+
+**JSONPlaceholder**
+
+Operations include:
+
+- GET requests
+- POST requests
+- PUT requests
+- PATCH requests
+- DELETE requests
+
+### Sample API Test Files:
+
+- `advanced-api-test.spec.ts`
+- `api-testing.spec.ts`
+
+---
+
+# ⚙️ CI/CD Integration
+
+This project supports automated test execution using **GitHub Actions**.
+
+Pipeline Workflow:
+
+1. Install dependencies
+2. Install Playwright browsers
+3. Execute UI tests
+4. Execute API tests
+5. Generate test reports
+6. Upload execution results
+
+Benefits:
+
+- Continuous regression testing
+- Faster feedback cycles
+- Automated validation pipeline
+- Improved release confidence
+
+---
+
+# 🧰 Tech Stack
+
+| Category | Tools |
+|----------|------|
+| Language | TypeScript |
+| Test Framework | Playwright |
+| API Testing | Playwright API |
+| Containerization | Docker |
+| CI/CD | GitHub Actions |
+| Reporting | Allure, Ortoni |
+| Version Control | Git |
+| Package Manager | npm |
+
+---
+
+# 📋 Prerequisites
+
+Before running this project, install:
+
+- **Node.js** (v18 or later)
+- **npm**
+
+Verify installation:
+node -v
+npm -v
+
+---
+
+# ⚙️ Installation & Setup
+
+Clone the repository:
 git clone https://github.com/Cecilia986/Playwright-typescript-project.git
 
-# Enter the directory
 cd Playwright-typescript-project
 
-# Install dependencies
+Install dependencies:
 npm install
 
-# Install Playwright browsers
+Install Playwright browsers:
 npx playwright install
+
+Install Docker Desktop
+
+---
+
+# ▶️ Running Tests
+
+Run all tests:
+npx playwright test
+
+Run UI tests only:
+npx playwright test tests/functional/
+
+Run API tests only:
+npx playwright test tests/api/
+
+Run tests in headed mode:
+npx playwright test --headed
+
+Run tests in debug mode:
+npx playwright test --debug
+
+---
+
+# 📊 Test Reports
+
+After test execution:
+
+Playwright generates:
+
+- HTML Reports
+- Allure Reports
+- Ortoni Reports
+
+To open HTML report:
+npx playwright show-report
+
+---
+
+# 🌍 Cross-Browser Testing
+
+The framework supports:
+
+- Chromium
+- Firefox
+- WebKit
+
+Configured in:
+playwright.config.ts
+
+---
+# 🐳 Docker Support
+
+This project supports containerized test execution using Docker, ensuring consistent test environments across machines.
+
+## Build Docker Image
+
+docker build -t playwright-tests .
+
+## Run Tests Inside Docker
+
+docker run --rm playwright-tests
+
+## Benefits of Using Docker
+
+- Ensures consistent test environment
+- Eliminates local dependency issues
+- Improves portability
+- Supports CI/CD execution
+
+---
+
+# ⚙️ CI/CD Integration
+
+This project integrates with **GitHub Actions** to automatically execute tests whenever code changes are pushed to the repository.
+
+## CI/CD Workflow
+
+1. Developer updates test code locally
+2. Tests are verified locally using Docker
+3. Code is pushed to GitHub
+4. GitHub Actions pipeline is triggered
+5. Dependencies are installed
+6. Playwright browsers are installed
+7. UI and API tests are executed
+8. Reports are generated automatically
+
+## Benefits
+
+- Continuous regression testing
+- Automated quality checks
+- Early defect detection
+- Improved release confidence
+
+  ---
+
+  # 🔄 Automation Workflow
+
+Local Development
+        ↓
+Run Tests in Docker
+        ↓
+Git Push
+        ↓
+GitHub Actions Triggered
+        ↓
+Install Dependencies
+        ↓
+Execute Tests
+        ↓
+Generate Reports
+
+# 🧠 Key Outcomes
+
+This project demonstrates:
+
+- Automation framework design
+- UI and API automation testing
+- Modular architecture development
+- Test reliability handling
+- CI/CD integration workflow
+- Scalable test design
+
+---
+
+# 👩‍💻 Author
+
+**Cecilia**
+
+Automation Test Engineer  
+Specializing in:
+
+- UI Automation Testing
+- API Testing
+- Playwright + TypeScript
+- CI/CD Automation
+---
+
+
