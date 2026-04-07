@@ -12,8 +12,6 @@ Key objectives of this project:
 - Support CI/CD-based test execution
 - Simulate real-world enterprise automation workflows
 
----
-
 #  Framework Architecture
 
 The framework follows a modular layered design:
@@ -57,8 +55,6 @@ reports/   # Test output reports
 - Generates execution reports
 - Supports HTML and Allure reports
 
----
-
 # Design Patterns Used
 
 The framework applies modern automation design principles:
@@ -68,8 +64,6 @@ The framework applies modern automation design principles:
 - **Reusable Utilities** – Reduces duplication
 - **Fixture-based Setup** – Standardizes test initialization
 - **API Test Chaining** – Supports workflow testing
-
----
 
 #  Test Coverage
 
@@ -141,8 +135,6 @@ Operations include:
 - `advanced-api-test.spec.ts`
 - `api-testing.spec.ts`
 
----
-
 #  Tech Stack
 
 | Category | Tools |
@@ -156,8 +148,6 @@ Operations include:
 | Version Control | Git |
 | Package Manager | npm |
 
----
-
 #  Prerequisites
 
 Before running this project, install:
@@ -168,8 +158,6 @@ Before running this project, install:
 Verify installation:
 node -v
 npm -v
-
----
 
 #  Installation & Setup
 
@@ -185,8 +173,6 @@ npm install
 
 Install Playwright browsers:
 npx playwright install
-
----
 
 #  Running Tests
 
@@ -205,8 +191,6 @@ npx playwright test --headed
 Run tests in debug mode:
 npx playwright test --debug
 
----
-
 # Test Reports
 
 After test execution:
@@ -220,8 +204,6 @@ Playwright generates:
 To open HTML report:
 npx playwright show-report
 
----
-
 #  Cross-Browser Testing
 
 The framework supports:
@@ -233,7 +215,6 @@ The framework supports:
 Configured in:
 playwright.config.ts
 
----
 #  Docker Support
 
 This project supports containerized test execution using Docker, ensuring consistent test environments across machines.
@@ -256,8 +237,6 @@ docker run --rm playwright-tests npx playwright test tests/api/
 - Eliminates local dependency issues
 - Improves portability
 - Supports CI/CD execution
-
----
 
 #  CI/CD Integration
 
@@ -297,18 +276,5 @@ Execute Tests
         ↓
 Generate Reports
 
-
-#  Author
-
-**Cecilia**
-
-Automation Test Engineer  
-Specializing in:
-
-- UI Automation Testing
-- API Testing
-- Playwright + TypeScript
-- CI/CD Automation
----
 
 
