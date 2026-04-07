@@ -1,15 +1,7 @@
-#  Playwright TypeScript Automation Framework
-
-A scalable end-to-end (E2E) automation testing framework built using **Playwright** and **TypeScript**, designed to simulate real-world enterprise testing scenarios. The framework supports containerized execution using Docker and automated CI/CD pipelines using GitHub Actions.
-
-This project demonstrates modern test automation practices including **UI testing**, **API testing**, **modular framework design**, and **CI/CD integration**.
-
----
-
 #  Project Overview
 
 This project implements a **production-style automation framework** that supports testing of dynamic web applications and REST APIs.
-
+The framework supports containerized execution using Docker and automated CI/CD pipelines using GitHub Actions.
 The framework is designed using **Page Object Model (POM)** and modular architecture to ensure maintainability, scalability, and reusability.
 
 Key objectives of this project:
