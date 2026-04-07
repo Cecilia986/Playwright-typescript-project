@@ -20,19 +20,19 @@ The framework follows a modular layered design:
 
 tests/ 
 
-├── functional/ # UI test scenarios 
+    ├── functional/ # UI test scenarios 
 
-├── api/ # API test scenarios 
+    ├── api/ # API test scenarios 
 
-pages/ # Page Object Model classes
+pages/  # Page Object Model classes
 
-utils/ # Reusable helper functions
+utils/  # Reusable helper functions
 
-fixtures/ # Shared test setup
+fixtures/  # Shared test setup
 
-config/ # Environment configuration
+config/    # Environment configuration
 
-reports/ # Test output reports
+reports/   # Test output reports
 
 
 ### Architecture Layers
