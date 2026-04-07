@@ -262,18 +262,20 @@ This project integrates with **GitHub Actions** to automatically execute tests w
 
 #  Automation Workflow
 
-Local Development
-        -↓
-Run Tests in Docker
-       - ↓
+Local Development /
+        ↓
+Run Tests in Docker /
+        ↓
 Git Push
-       - ↓
+        ↓
 GitHub Actions Triggered
-       - ↓
+        ↓
 Install Dependencies
-        -↓
+        ↓
 Execute Tests
-        -↓
+
+        ↓
+        
 Generate Reports
 
 
