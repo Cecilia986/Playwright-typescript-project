@@ -75,8 +75,6 @@ The framework applies modern automation design principles:
 
 This framework includes testing for both **UI workflows** and **REST APIs**.
 
----
-
 ##  UI Testing (`tests/functional/`)
 
 ### Covered Scenarios:
@@ -100,8 +98,6 @@ This framework includes testing for both **UI workflows** and **REST APIs**.
 - `dynamic-element-scene.spec.ts`
 - `basic-form-scenarios.spec.ts`
 - `todomvc.spec.ts`
-
----
 
 ##  API Testing (`tests/api/`)
 
