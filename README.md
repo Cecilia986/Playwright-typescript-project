@@ -59,7 +59,7 @@ reports/   # Test output reports
 
 ---
 
-# 🧩 Design Patterns Used
+# Design Patterns Used
 
 The framework applies modern automation design principles:
 
@@ -77,7 +77,7 @@ This framework includes testing for both **UI workflows** and **REST APIs**.
 
 ---
 
-## 🌐 UI Testing (`tests/functional/`)
+##  UI Testing (`tests/functional/`)
 
 ### Covered Scenarios:
 
@@ -103,7 +103,7 @@ This framework includes testing for both **UI workflows** and **REST APIs**.
 
 ---
 
-## 🔌 API Testing (`tests/api/`)
+##  API Testing (`tests/api/`)
 
 API tests simulate real-world backend workflows.
 
@@ -147,29 +147,7 @@ Operations include:
 
 ---
 
-# ⚙️ CI/CD Integration
-
-This project supports automated test execution using **GitHub Actions**.
-
-Pipeline Workflow:
-
-1. Install dependencies
-2. Install Playwright browsers
-3. Execute UI tests
-4. Execute API tests
-5. Generate test reports
-6. Upload execution results
-
-Benefits:
-
-- Continuous regression testing
-- Faster feedback cycles
-- Automated validation pipeline
-- Improved release confidence
-
----
-
-# 🧰 Tech Stack
+#  Tech Stack
 
 | Category | Tools |
 |----------|------|
@@ -184,7 +162,7 @@ Benefits:
 
 ---
 
-# 📋 Prerequisites
+#  Prerequisites
 
 Before running this project, install:
 
@@ -197,7 +175,9 @@ npm -v
 
 ---
 
-# ⚙️ Installation & Setup
+#  Installation & Setup
+
+Install Docker Desktop
 
 Clone the repository:
 git clone https://github.com/Cecilia986/Playwright-typescript-project.git
@@ -210,11 +190,9 @@ npm install
 Install Playwright browsers:
 npx playwright install
 
-Install Docker Desktop
-
 ---
 
-# ▶️ Running Tests
+#  Running Tests
 
 Run all tests:
 npx playwright test
@@ -233,7 +211,7 @@ npx playwright test --debug
 
 ---
 
-# 📊 Test Reports
+# Test Reports
 
 After test execution:
 
@@ -248,7 +226,7 @@ npx playwright show-report
 
 ---
 
-# 🌍 Cross-Browser Testing
+#  Cross-Browser Testing
 
 The framework supports:
 
@@ -260,7 +238,7 @@ Configured in:
 playwright.config.ts
 
 ---
-# 🐳 Docker Support
+#  Docker Support
 
 This project supports containerized test execution using Docker, ensuring consistent test environments across machines.
 
@@ -281,7 +259,7 @@ docker run --rm playwright-tests
 
 ---
 
-# ⚙️ CI/CD Integration
+#  CI/CD Integration
 
 This project integrates with **GitHub Actions** to automatically execute tests whenever code changes are pushed to the repository.
 
@@ -305,7 +283,7 @@ This project integrates with **GitHub Actions** to automatically execute tests w
 
   ---
 
-  # 🔄 Automation Workflow
+  #  Automation Workflow
 
 Local Development
         ↓
@@ -321,20 +299,8 @@ Execute Tests
         ↓
 Generate Reports
 
-# 🧠 Key Outcomes
 
-This project demonstrates:
-
-- Automation framework design
-- UI and API automation testing
-- Modular architecture development
-- Test reliability handling
-- CI/CD integration workflow
-- Scalable test design
-
----
-
-# 👩‍💻 Author
+#  Author
 
 **Cecilia**
 
