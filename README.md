@@ -281,9 +281,7 @@ This project integrates with **GitHub Actions** to automatically execute tests w
 - Early defect detection
 - Improved release confidence
 
-  ---
-
-  #  Automation Workflow
+#  Automation Workflow
 
 Local Development
         ↓
