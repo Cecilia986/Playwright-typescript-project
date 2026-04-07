@@ -246,6 +246,10 @@ docker build -t playwright-tests .
 
 docker run --rm playwright-tests
 
+Run Specific Tests: 
+
+docker run --rm playwright-tests npx playwright test tests/api/
+
 ## Benefits of Using Docker
 
 - Ensures consistent test environment
