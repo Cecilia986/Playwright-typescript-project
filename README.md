@@ -1,8 +1,10 @@
 #  Project Overview
 
-This project implements a **production-style automation framework** that supports testing of dynamic web applications and REST APIs.
-The framework supports containerized execution using Docker and automated CI/CD pipelines using GitHub Actions.
-The framework is designed using **Page Object Model (POM)** and modular architecture to ensure maintainability, scalability, and reusability.
+This project implements a production-style automation framework that supports testing of dynamic web applications and REST APIs.
+
+The framework supports containerized execution using Docker and automated CI/CD pipelines using GitHub Actions. It also integrates with Slack to send automated test execution results and notifications after each test run.
+
+The framework is designed using Page Object Model (POM) and modular architecture to ensure maintainability, scalability, and reusability.
 
 Key objectives of this project:
 
